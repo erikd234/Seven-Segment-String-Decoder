@@ -64,15 +64,7 @@ const converterEnum = {
   displayOff: "0000000",
 };
 
-class OutputBinaryAndHex {
-  binaryString;
-  hexString;
-  constructor(binaryString, hexString) {
-    this.binaryString = binaryString;
-    this.hexString = hexString;
-  }
-}
-function converter(string, mode = modeEnum.cathode) {
+function converter(string, mode = "Common Cathode") {
   // we return an output object with arrays of binary strigs and hex strings.
   var chars = [];
   var convertedBinary = []; // this will be an array of strings
