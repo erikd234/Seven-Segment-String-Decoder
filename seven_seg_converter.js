@@ -60,6 +60,7 @@ const converterEnum = {
   7: "1110000", // 7
   8: "1111111", // 8
   9: "1111011", // 9
+  " ": "00000000",
   displayOff: "0000000",
 };
 
@@ -71,17 +72,14 @@ class OutputBinaryAndHex {
     this.hexString = hexString;
   }
 }
-const modeEnum = {
-  cathode: "cathode",
-  anode: "anode",
-};
-
 function converter(string, mode = modeEnum.cathode) {
   // we return an output object with arrays of binary strigs and hex strings.
+  var chars = [];
   var convertedBinary = []; // this will be an array of strings
   var convertedHex = []; // this will be an array of strings
   for (key in string) {
     console.log("We are working on character " + string[key] + "");
+    chars.push(string[key]);
     convertedBinary.push(charToBinary(string[key], mode)); // converts the character to its binary string for the 7 seg display
   }
 
@@ -89,8 +87,16 @@ function converter(string, mode = modeEnum.cathode) {
     // console.log("We are working binary string " + convertedBinary[key] + "");
     convertedHex.push(binaryToHex(convertedBinary[key])); // converts the binary string to its equal in HEX
   }
-
-  return new OutputBinaryAndHex(convertedBinary, convertedHex);
+  var outputHtmlString = "";
+  // formatting outputs to a string
+  for (key in convertedBinary) {
+    outputHtmlString =
+      outputHtmlString +
+      chars[key] +
+      ` => Binary: ${convertedBinary[key]} ` +
+      `Hex: ${convertedHex[key]} <br>`;
+  }
+  return outputHtmlString;
 }
 
 function binaryToHex(binary) {
@@ -110,7 +116,7 @@ function charToBinary(char, mode) {
     returnBinary = converterEnum.displayOff;
   }
 
-  if (mode === modeEnum.cathode) {
+  if (mode === "Common Cathode") {
     // console.log("Cathode mode was selected, complimenting binary string...");
     returnBinary = anodeToCathode(returnBinary);
   } else {
@@ -145,7 +151,10 @@ function reverseString(str) {
   return joinArray;
 }
 
-var output = converter("@@@@");
-
-console.log(output.binaryString);
-console.log(output.hexString);
+document.getElementById("convert").onclick = function () {
+  var stringInput = document.getElementById("stringInput").value;
+  var mode = document.getElementById("mode").value;
+  console.log(typeof mode);
+  var binaryAndHex = converter(stringInput, mode);
+  document.getElementById("result").innerHTML = binaryAndHex;
+};

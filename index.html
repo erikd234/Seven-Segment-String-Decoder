@@ -6,5 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Convert text to 7 seg display</title>
   </head>
-  <body></body>
+  <body>
+    <h1>Text decoder for seven segment display:</h1>
+    <h3>
+      Enter some text or numbers and get hex and binary that can be written to a
+      seven segment display!
+    </h3>
+    <h3>Use Example:</h3>
+    <h3>Enter:</h3>
+    <p>Text: "IGEN"</p>
+    <p>Mode: "Common Cathode"</p>
+    <h3>Result:</h3>
+    <p>
+      I => Binary: 1001111, Hex: 4FH <br />
+      G => Binary 1000010 , Hex: 42H <br />
+      E => Binary: 0000110, Hex: 6H <br />
+      N => Binary: 0101011, Hex: 2BH
+    </p>
+    <h2>Enter text here:</h2>
+    <input type="text" id="stringInput" />
+    <input type="button" id="convert" value="Convert" />
+    <label for="mode">Select Mode (Defaults to common Cathode):</label>
+    <select name="mode" id="mode">
+      <option value="Common Cathode">Common Cathode</option>
+      <option value="Common Anode">Common Anode</option>
+    </select>
+    <h2>Result:</h2>
+    <p id="result">The result text will go here</p>
+
+    <script src="seven_seg_converter.js"></script>
+  </body>
 </html>
