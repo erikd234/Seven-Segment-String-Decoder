@@ -32,22 +32,24 @@
         </div>
 
         <div class="item4">
-          <label for="mode">Select Mode (Defaults to common Cathode):</label>
-          <select name="mode" id="mode">
-            <option value="Common Cathode">Common Cathode</option>
-            <option value="Common Anode">Common Anode</option>
-          </select>
-          <input type="text" id="stringInput" />
+          <textarea id="stringInput"></textarea>
         </div>
         <div class="item5">
-          <input type="button" id="convert" value="Convert" />
+          <div class="selectMode">
+            <h3>Select Mode:</h3>
+            <select name="mode" id="mode">
+              <option value="Common Cathode">Common Cathode</option>
+              <option value="Common Anode">Common Anode</option>
+            </select>
+          </div>
+          <input class="btn" type="button" id="convert" value="Convert" />
         </div>
         <div class="item6">
           <p id="result">The result text will go here</p>
         </div>
       </div>
     </div>
-    <div class="center">
+    <!-- <div class="center"> THIS IS THE USE EXAMPLE IT NEEDS TO BE FORMATTED
       <div class="useExampleContainer">
         <h3>Use Example:</h3>
         <h3>Enter:</h3>
@@ -61,7 +63,7 @@
           N => Binary: 0101011, Hex: 2BH
         </p>
       </div>
-    </div>
+    </div> -->
     <script src="seven_seg_converter.js"></script>
   </body>
 </html>

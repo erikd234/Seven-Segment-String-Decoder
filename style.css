@@ -18,7 +18,24 @@
   display: flex;
   justify-content: center;
 }
-
+textarea {
+  width: 100%;
+  height: 100%;
+}
+.item4 {
+  border-style: solid;
+}
+.item5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.item6 {
+  padding: 1em;
+  border-style: solid;
+  overflow-y: scroll;
+}
 .converterContainer {
   margin-top: -200px;
   width: 75%;
@@ -31,7 +48,9 @@
   height: 500px;
   padding: 3em;
 }
-
+.selectMode {
+  margin-bottom: 100px;
+}
 .pageTitleContainer {
   color: white;
   display: flex;
@@ -48,13 +67,77 @@
   justify-content: center;
   width: 75%;
 }
+.btn {
+  top: 0;
+  left: 0;
+  transition: all 0.15s linear 0s;
+  position: relative;
+  display: inline-block;
+  padding: 15px 25px;
+  background-color: #ffe800;
+  text-transform: uppercase;
+  color: #404040;
+  font-family: arial;
+  letter-spacing: 1px;
+  box-shadow: -6px 6px 0 #404040;
+  text-decoration: none;
+}
+.btn:hover {
+  top: 3px;
+  left: -3px;
+  box-shadow: -3px 3px 0 #404040;
+}
+.btn:hover::after {
+  top: 1px;
+  left: -2px;
+  width: 4px;
+  height: 4px;
+}
+.btn:hover::before {
+  bottom: -2px;
+  right: 1px;
+  width: 4px;
+  height: 4px;
+}
+.btn::after {
+  transition: all 0.15s linear 0s;
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: -4px;
+  width: 8px;
+  height: 8px;
+  background-color: #404040;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+.btn::before {
+  transition: all 0.15s linear 0s;
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  right: 2px;
+  width: 8px;
+  height: 8px;
+  background-color: #404040;
+  transform: rotate(45deg);
+  z-index: -1;
+}
 
-input {
-  display: block;
+a.btn {
+  position: relative;
 }
-label {
-  display: block;
+
+a:active.btn {
+  top: 6px;
+  left: -6px;
+  box-shadow: none;
 }
-select {
-  display: block;
+a:active.btn:before {
+  bottom: 1px;
+  right: 1px;
+}
+a:active.btn:after {
+  top: 1px;
+  left: 1px;
 }
