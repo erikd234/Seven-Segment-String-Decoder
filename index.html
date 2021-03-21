@@ -8,38 +8,42 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="pageTitleContainer">
-      <h1 id="pageTitle">Text Decoder for Seven Segment Display:</h1>
-      <h3>
-        Enter some text or numbers and get hex and binary that can be written to
-        a seven segment display!
-      </h3>
+    <div class="background-image">
+      <div class="pageTitleContainer">
+        <h1 id="pageTitle">Text Decoder for Seven Segment Display:</h1>
+        <h3>
+          Enter some text or numbers and get hex and binary that can be written
+          to a seven segment display!
+        </h3>
+      </div>
     </div>
 
     <div class="center">
       <div class="converterContainer">
-        <div class="flex-1">
-          <div class="inputInfoFlexChild">
-            <h2>Enter text here:</h2>
-          </div>
-          <div class="outputInfoFlexChild">
-            <h2>Result:</h2>
-          </div>
+        <div class="item1">
+          <h2>Enter text here:</h2>
         </div>
-        <div class="flex-2">
-          <div class="inputEntryFlexChild">
-            <input type="text" id="stringInput" />
-          </div>
-          <input type="button" id="convert" value="Convert" /><label for="mode"
-            >Select Mode (Defaults to common Cathode):</label
-          >
+
+        <div class="item2"></div>
+        <!-- this is blank space for even grid -->
+
+        <div class="item3">
+          <h2>Result:</h2>
+        </div>
+
+        <div class="item4">
+          <label for="mode">Select Mode (Defaults to common Cathode):</label>
           <select name="mode" id="mode">
             <option value="Common Cathode">Common Cathode</option>
             <option value="Common Anode">Common Anode</option>
           </select>
-          <div class="outputFlexChild">
-            <p id="result">The result text will go here</p>
-          </div>
+          <input type="text" id="stringInput" />
+        </div>
+        <div class="item5">
+          <input type="button" id="convert" value="Convert" />
+        </div>
+        <div class="item6">
+          <p id="result">The result text will go here</p>
         </div>
       </div>
     </div>
