@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#pageTitle {
+  margin-bottom: 30px;
+}
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.converterContainer {
+  width: 75%;
+  background-color: white;
+  border-radius: 1em;
+  box-shadow: 0px 5px 10px;
+  height: 500px;
+  padding: 3em;
+}
+
+.flex-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.flex-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.pageTitleContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin: 100px 100px;
+  text-align: center;
+}
+
+.useExampleContainer {
+  margin: 100px 100px;
+  display: flex;
+  justify-content: center;
+  width: 75%;
+}
+
+input {
+  display: block;
+}
+label {
+  display: block;
+}
+select {
+  display: block;
+}
