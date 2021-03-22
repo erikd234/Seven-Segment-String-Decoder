@@ -1,10 +1,10 @@
-# Seven-Segnment-String-Decoder
+# Seven-Segment-String-Decoder
 
 
 Web app that decodes strings of text to seven segment display binary and hexadecimal.
 
 Enter some text or numbers and get hex and binary that can be written to a
-seven segment display!
+seven segment display.
 
 WEB app is now live at [https://erikdahl.ca/apps/sevenseg/decoder](https://erikdahl.ca/apps/sevenseg/decoder) <br/>
   
