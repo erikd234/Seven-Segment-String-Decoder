@@ -1,17 +1,16 @@
 # Seven-Segment-String-Decoder
 
-
 Web app that decodes strings of text to seven segment display binary and hexadecimal.
 
 Enter some text or numbers and get hex and binary that can be written to a
 seven segment display.
 
 WEB app is now live at [https://erikdahl.ca/apps/sevenseg/decoder](https://erikdahl.ca/apps/sevenseg/decoder) <br/>
-  
+
 Example Usage: <br/>
 Enter: <br/>
 Text: "IGEN" <br/>
-Mode: "Common Cathode" (Common Anode will compliment the binary string and give different HEX values) <br/>
+Mode: "Common Anode" (Common Cathode will compliment the binary string and give different HEX values) <br/>
 
 Result:<br/>
 I => Binary: 1001111, Hex: 4FH <br/>
