@@ -64,7 +64,7 @@ const converterEnum = {
   displayOff: "0000000",
 };
 
-function converter(string, mode = "Common Cathode") {
+function converter(string, mode = "Common Anode") {
   // we return an output object with arrays of binary strigs and hex strings.
   var chars = [];
   var convertedBinary = []; // this will be an array of strings
@@ -108,7 +108,7 @@ function charToBinary(char, mode) {
     returnBinary = converterEnum.displayOff;
   }
 
-  if (mode === "Common Cathode") {
+  if (mode === "Common Anode") {
     // console.log("Cathode mode was selected, complimenting binary string...");
     returnBinary = anodeToCathode(returnBinary);
   } else {
